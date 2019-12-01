@@ -1,0 +1,52 @@
+{
+    "name": "pruebavhdl",
+    "displayName": "VHDL",
+    "description": "Snippets, syntax highlighting, code completion and so on",
+    "version": "0.0.1",
+    "publisher": "puorc",
+    "icon": "images/icon.png",
+    "homepage": "https://github.com/puorc/vhdl-vscode/blob/master/README.md",
+     "repository": {
+        "type": "git",
+        "url": "https://github.com/puorc/vhdl-vscode"
+    },
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Languages",
+        "Snippets"
+    ],
+    "activationEvents": [
+       "onLanguage:vhdl"
+    ],
+    "main": "./out/src/vhdlMain",
+    "contributes": {
+        "languages": [{
+            "id": "vhdl",
+            "aliases": ["VHDL", "vhdl"],
+            "extensions": [".vhd",".vhdl",".vho",".vht"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "vhdl",
+            "scopeName": "source.vhdl",
+            "path": "./syntaxes/vhdl.tmLanguage"
+        }],
+        "snippets": [
+            {
+                "language": "vhdl",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+        "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "typescript": "^1.8.5",
+        "vscode": "^0.11.0"
+    }
+}
