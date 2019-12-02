@@ -181,7 +181,7 @@
 	},
 	"std_logic":{
 		"prefix": "std_logic",
-		"body": "std_logic;",
+		"body": "std_logic;\n",
 		"description": "std_logic",
 		"scope": "source.vhdl"
 	},
